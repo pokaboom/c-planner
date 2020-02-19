@@ -4,62 +4,66 @@ class OverView extends StatefulWidget {
   _OverViewState createState() => _OverViewState();
 }
 
+
 class _OverViewState extends State<OverView> {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      scrollDirection: Axis.horizontal,
-      children: <Widget>[
-        Container(
-          height: 20,
-          width: 20,
-          child: RaisedButton(
-            shape: RoundedRectangleBorder(
-                borderRadius: new BorderRadius.circular(18.0),
-            ),
-            color: Colors.red,
-            onPressed: (){},
-            child: Text('TIMETABLE'),
-          ),
-        ),
+       scrollDirection: Axis.horizontal,
+        shrinkWrap: false,
+        children: <Widget>[
+          Container(
+            height: 40,
+            width: 110,
 
-        Container(
-          height: 20,
-          width: 20,
-          child: RaisedButton(
-            shape: RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(18.0),
-            side: BorderSide(color: Colors.yellow)
+            child: RaisedButton(
+              shape: RoundedRectangleBorder(
+                  borderRadius: new BorderRadius.circular(18.0),
+              ),
+              color: Colors.red,
+              onPressed: (){},
+              child: Text('TIMETABLE'),
             ),
-            onPressed: (){},
-            child: Text('AGENDA'),
           ),
-        ),
-        Container(
-          height: 20,
-          width: 20,
-          child: RaisedButton(
-            shape: RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(18.0),
-            side: BorderSide(color: Colors.lightGreen)
+
+          Container(
+            height: 40,
+            width: 110,
+            child: RaisedButton(
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              ),
+              color: Colors.yellow,
+              onPressed: (){},
+              child: Text('AGENDA'),
             ),
-            onPressed: (){},
-            child: Text('CALENDAR'),
           ),
-        ),
-        Container(
-          height: 20,
-          width: 20,
-          child: RaisedButton(
-            shape: RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(18.0),
-            side: BorderSide(color: Colors.teal)
+          Container(
+            height: 40,
+            width: 110,
+            child: RaisedButton(
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              ),
+    color: Colors.lightGreen,
+              onPressed: (){},
+              child: Text('CALENDAR'),
             ),
-            onPressed: (){},
-            child: Text('SUBJECTS'),
           ),
-        ),
-      ],
-    );
+          Container(
+            height: 40,
+            width: 110,
+            child: RaisedButton(
+              shape: RoundedRectangleBorder(
+              borderRadius: new BorderRadius.circular(18.0),
+              ),
+    color: Colors.teal,
+              onPressed: (){},
+              child: Text('SUBJECTS'),
+            ),
+          ),
+        ],
+      );
+
   }
 }

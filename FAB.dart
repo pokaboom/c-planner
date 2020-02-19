@@ -31,12 +31,22 @@ class _FabActivityState extends State<FabActivity>
             scale: CurvedAnimation(
                 parent: _controller,
                 curve: Interval(1.0, 1.0, curve: Curves.easeOut)),
-            child: FloatingActionButton(
-              mini: true,
-              heroTag: 'reminder',
+            child: RawMaterialButton(
               onPressed: () {},
-              child: Icon(Icons.notifications),
+              child: Icon(
+                Icons.notifications,
+                color: Colors.black87,
+              ),
+              shape: CircleBorder(),
+              elevation: 10,
+              fillColor: Colors.white,
             ),
+//            RaisedButton(
+//              // mini: true,
+//              // heroTag: 'reminder',
+//              onPressed: () {},
+//              child: Icon(Icons.notifications),
+//            ),
           ),
         ),
         Container(
@@ -47,11 +57,15 @@ class _FabActivityState extends State<FabActivity>
             scale: CurvedAnimation(
                 parent: _controller,
                 curve: Interval(0.5, 1.0, curve: Curves.easeOut)),
-            child: FloatingActionButton(
-              mini: true,
-              heroTag: 'exam',
+            child: RawMaterialButton(
               onPressed: () {},
-              child: Icon(Icons.assignment),
+              child: Icon(
+                Icons.assignment,
+                color: Colors.black87,
+              ),
+              shape: CircleBorder(),
+              elevation: 10,
+              fillColor: Colors.white,
             ),
           ),
         ),
@@ -63,18 +77,22 @@ class _FabActivityState extends State<FabActivity>
             scale: CurvedAnimation(
                 parent: _controller,
                 curve: Interval(0.0, 1.0, curve: Curves.easeOut)),
-            child: FloatingActionButton(
-              mini: true,
-              heroTag: 'homework',
+            child: RawMaterialButton(
               onPressed: () {},
-              child: Icon(Icons.import_contacts),
+              child: Icon(
+                Icons.import_contacts,
+                color: Colors.black87,
+              ),
+              shape: CircleBorder(),
+              elevation: 10,
+              fillColor: Colors.white,
             ),
           ),
         ),
         Container(
           height: 60,
           width: 56,
-          child: FloatingActionButton(
+          child: RawMaterialButton(
             onPressed: () {
               if (_controller.isDismissed) {
                 _controller.forward();
@@ -82,7 +100,10 @@ class _FabActivityState extends State<FabActivity>
                 _controller.reverse();
               }
             },
-            child: Icon(Icons.add),
+            shape: CircleBorder(),
+            elevation: 10,
+            fillColor: Color.fromRGBO(60, 66, 150, 1),
+            child: Icon(Icons.add,color: Colors.white,),
           ),
         ),
       ],

@@ -1,4 +1,6 @@
 import 'dart:io';
+import './overview.dart';
+import './calendar.dart';
 import './FAB.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -14,6 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: appTitle,
       home: MyHomePage(title: appTitle),
+
     );
   }
 }
@@ -39,15 +42,18 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(widget.title)),
+
       floatingActionButton: FabActivity(),
       bottomNavigationBar: BottomNavigationBar(items: [
         BottomNavigationBarItem(icon: Icon(Icons.home), title: Text('Home')),
         BottomNavigationBarItem(icon: Icon(Icons.dvr),title: Text('Overview')),
         BottomNavigationBarItem(icon: Icon(Icons.settings),title: Text('Settings'))
       ]),
+      body: OverView(),
       drawer: Drawer(
         child: ListView(
           padding: EdgeInsets.zero,
+
           children: <Widget>[
             Container(
               height: 120,
@@ -56,7 +62,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
-                     _storageImage != null ? Image.file(_storageImage,fit: BoxFit.fill,) : FloatingActionButton(
+                    _storageImage != null ? Image.file(_storageImage,fit: BoxFit.fill,) : FloatingActionButton(
                       onPressed: _takePicture,
                       child: Icon(
                         Icons.camera_alt,
@@ -81,6 +87,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                     ),
                     FloatingActionButton(
+                        heroTag: 'fa1',
                         onPressed: () {},
                         child: Icon(
                           Icons.settings,
@@ -106,6 +113,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       'Overview',
                       style: TextStyle(fontSize: 17),
                     ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => OverView()),
+                      );
+                    },
                     leading: Icon(Icons.home),
                   ),
                 ),
@@ -130,6 +143,12 @@ class _MyHomePageState extends State<MyHomePage> {
                       'Calendar',
                       style: TextStyle(fontSize: 17),
                     ),
+
+                    onTap: () {
+
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => Calendar()));
+                    },
                     leading: Icon(Icons.calendar_today),
                   ),
                 ),
