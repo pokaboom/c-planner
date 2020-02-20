@@ -1,4 +1,5 @@
 import 'dart:io';
+import './timetable.dart';
 import './overview.dart';
 import './calendar.dart';
 import './FAB.dart';
@@ -145,7 +146,6 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
 
                     onTap: () {
-
                       Navigator.of(context).push(MaterialPageRoute(
                           builder: (BuildContext context) => Calendar()));
                     },
@@ -157,6 +157,10 @@ class _MyHomePageState extends State<MyHomePage> {
                   width: double.infinity,
                   margin: EdgeInsets.only(bottom: 20),
                   child: ListTile(
+                    onTap: (){
+                      Navigator.of(context).push(MaterialPageRoute(
+                          builder: (BuildContext context) => TimeTable()));
+                    },
                     title: Text(
                       'Timetable',
                       style: TextStyle(fontSize: 17),
