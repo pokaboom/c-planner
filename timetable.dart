@@ -1,20 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:newapp/drawers.dart';
 import 'package:weekly_timetable/weekly_timetable.dart';
+import './drawers.dart';
 
 class TimeTable extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-        title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: MyHomePage(title: 'Flutter TimeTable Plugin Example'),
+        home: MyHomePage(title: 'Timetable'),
         debugShowCheckedModeBanner: false
     );
   }
 }
-
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
 
@@ -31,7 +31,8 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: WeeklyTimeTable(),
+      drawer: Drawers(),
+      body: WeeklyTimeTable(cellSelectedColor: Colors.deepPurpleAccent,),
     );
   }
 }

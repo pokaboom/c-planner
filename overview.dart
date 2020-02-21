@@ -9,7 +9,7 @@ class _OverViewState extends State<OverView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('OverView'),),
+
       body:  Container(
         height: 100,
         child: ListView(
