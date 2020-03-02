@@ -1,7 +1,5 @@
-import 'dart:io';
-import './timetable.dart';
 import './overview.dart';
-import './calendar.dart';
+import './auth.dart';
 import './FAB.dart';
 import 'package:image_picker/image_picker.dart';
 import './drawers.dart';

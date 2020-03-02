@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
+import './auth.dart';
 import './timetable.dart';
 import './calendar.dart';
 import 'package:image_picker/image_picker.dart';
@@ -11,7 +12,6 @@ class Drawers extends StatefulWidget {
 }
 
 class _DrawersState extends State<Drawers> {
-
   File _storageImage;
 
   Future<void> _takePicture() async {
@@ -36,35 +36,22 @@ class _DrawersState extends State<Drawers> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: <Widget>[
-                  _storageImage != null
-                      ? Image.file(
-                    _storageImage,
-                    fit: BoxFit.fill,
-                  )
-                      : FloatingActionButton(
-                    onPressed: _takePicture,
-                    child: Icon(
-                      Icons.camera_alt,
-                      size: 25,
-                    ),
-                    backgroundColor: Color.fromRGBO(60, 66, 150, 1),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(12),
-                    height: 40,
-                    child: Column(
-                      children: <Widget>[
-                        Text(
-                          'Your name',
-                          style: TextStyle(color: Colors.white, fontSize: 20),
-                        ),
-                        Text(
-                          'offline',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ],
-                    ),
-                  ),
+                  Column(
+                     children: <Widget>[
+                       RawMaterialButton(
+                         fillColor: Colors.white,
+                         onPressed: () {
+                           Navigator.of(context).push(MaterialPageRoute(
+                               builder: (BuildContext context) => Auth()));
+                         },
+                         child: Text('login'),
+                         shape: RoundedRectangleBorder(
+                           borderRadius: BorderRadius.circular(18),
+                           side: BorderSide(color: Colors.brown),
+                         ),
+                       )
+                     ],
+                   ),
                   FloatingActionButton(
                       heroTag: 'fa1',
                       onPressed: () {},
@@ -82,7 +69,6 @@ class _DrawersState extends State<Drawers> {
             ),
           ),
           Column(
-
             children: <Widget>[
               Container(
                 height: 47,
@@ -93,9 +79,7 @@ class _DrawersState extends State<Drawers> {
                     'Overview',
                     style: TextStyle(fontSize: 17),
                   ),
-                  onTap: () {
-
-                  },
+                  onTap: () {},
                   leading: Icon(Icons.home),
                 ),
               ),
