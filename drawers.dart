@@ -5,6 +5,7 @@ import './timetable.dart';
 import './calendar.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/cupertino.dart';
+import './auth.dart';
 
 class Drawers extends StatefulWidget {
   @override
@@ -12,16 +13,9 @@ class Drawers extends StatefulWidget {
 }
 
 class _DrawersState extends State<Drawers> {
-  File _storageImage;
 
-  Future<void> _takePicture() async {
-    final _imageFile = await ImagePicker.pickImage(
-      source: ImageSource.gallery,
-    );
-    setState(() {
-      _storageImage = _imageFile;
-    });
-  }
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -52,15 +46,7 @@ class _DrawersState extends State<Drawers> {
                        )
                      ],
                    ),
-                  FloatingActionButton(
-                      heroTag: 'fa1',
-                      onPressed: () {},
-                      child: Icon(
-                        Icons.settings,
-                        size: 30,
-                      ),
-                      elevation: 0,
-                      backgroundColor: Color.fromRGBO(62, 81, 183, 1)),
+
                 ],
               ),
               decoration: BoxDecoration(

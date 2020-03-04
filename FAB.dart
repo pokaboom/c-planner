@@ -8,6 +8,7 @@ class FabActivity extends StatefulWidget {
 class _FabActivityState extends State<FabActivity>
     with TickerProviderStateMixin {
   AnimationController _controller;
+  DateTime _dateTime;
 
   @override
   void initState() {
@@ -32,7 +33,18 @@ class _FabActivityState extends State<FabActivity>
                 parent: _controller,
                 curve: Interval(1.0, 1.0, curve: Curves.easeOut)),
             child: RawMaterialButton(
-              onPressed: () {},
+              onPressed: () {
+                showDatePicker(
+                    context: context,
+                    initialDate: _dateTime == null ? DateTime.now() : _dateTime,
+                    firstDate: DateTime(2001),
+                    lastDate: DateTime(2021)
+                ).then((date) {
+                  setState(() {
+                    _dateTime = date;
+                  });
+                });
+              },
               child: Icon(
                 Icons.notifications,
                 color: Colors.black87,
