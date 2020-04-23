@@ -25,11 +25,10 @@ dependencies:
   table_calendar: ^2.0.1
   weekly_timetable: ^0.2.1
   flutter_week_view: ^0.2.1+4
-  firebase_core: ^0.3.1+1
-  firebase_auth: ^0.8.3
-  google_sign_in: ^4.0.1+3
   font_awesome_flutter: ^8.2.0
-  shared_preferences: ^0.5.6+2
+  flutter_speed_dial: ^1.2.5
+  shared_preferences: ^0.5.7
+  charts_flutter: ^0.9.0
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
