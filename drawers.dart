@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import './event/subject.dart';
 import 'dart:io';
-import './auth.dart';
 import './timetable.dart';
 import './calendar.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/cupertino.dart';
-import './auth.dart';
 
 class Drawers extends StatefulWidget {
   @override
@@ -13,9 +12,6 @@ class Drawers extends StatefulWidget {
 }
 
 class _DrawersState extends State<Drawers> {
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +31,7 @@ class _DrawersState extends State<Drawers> {
                        RawMaterialButton(
                          fillColor: Colors.white,
                          onPressed: () {
-                           Navigator.of(context).push(MaterialPageRoute(
-                               builder: (BuildContext context) => Auth()));
+
                          },
                          child: Text('login'),
                          shape: RoundedRectangleBorder(
@@ -143,6 +138,10 @@ class _DrawersState extends State<Drawers> {
                     'Subjects',
                     style: TextStyle(fontSize: 17),
                   ),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => Subject()));
+                  },
                   leading: Icon(Icons.library_books),
                 ),
               ),
@@ -156,18 +155,6 @@ class _DrawersState extends State<Drawers> {
                     style: TextStyle(fontSize: 17),
                   ),
                   leading: Icon(Icons.assignment_turned_in),
-                ),
-              ),
-              Container(
-                height: 47,
-                width: double.infinity,
-                margin: EdgeInsets.only(bottom: 20),
-                child: ListTile(
-                  title: Text(
-                    'Teachers',
-                    style: TextStyle(fontSize: 17),
-                  ),
-                  leading: Icon(Icons.person),
                 ),
               ),
             ],

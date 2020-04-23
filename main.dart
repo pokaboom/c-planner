@@ -1,7 +1,5 @@
 import './overview.dart';
-import './auth.dart';
 import './FAB.dart';
-import 'package:image_picker/image_picker.dart';
 import './drawers.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
