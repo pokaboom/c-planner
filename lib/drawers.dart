@@ -157,18 +157,6 @@ class _DrawersState extends State<Drawers> {
               ),
               Container(
                 height: 47,
-                width: double.infinity,
-                margin: EdgeInsets.only(bottom: 12),
-                child: ListTile(
-                  title: Text(
-                    'Agenda',
-                    style: TextStyle(fontSize: 17),
-                  ),
-                  leading: Icon(Icons.book),
-                ),
-              ),
-              Container(
-                height: 47,
                 margin: EdgeInsets.only(bottom: 12),
                 width: double.infinity,
                 child: ListTile(
@@ -234,18 +222,6 @@ class _DrawersState extends State<Drawers> {
                         builder: (BuildContext context) => Subject()));
                   },
                   leading: Icon(Icons.library_books),
-                ),
-              ),
-              Container(
-                height: 47,
-                width: double.infinity,
-                margin: EdgeInsets.only(bottom: 20),
-                child: ListTile(
-                  title: Text(
-                    'Attendance',
-                    style: TextStyle(fontSize: 17),
-                  ),
-                  leading: Icon(Icons.assignment_turned_in),
                 ),
               ),
             ],

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:newapp/grades/grade.dart';
 import './timetable.dart';
 import './calendar.dart';
 import './event/subject.dart';
@@ -43,22 +44,7 @@ class _OverViewState extends State<OverView> {
                           ),
                         ),
                       ),
-                      Container(
-                        height: 40,
-                        width: 110,
-                        child: RaisedButton(
-                          elevation: 10,
-                          shape: RoundedRectangleBorder(
-                            borderRadius: new BorderRadius.circular(18.0),
-                          ),
-                          color: Colors.orange,
-                          onPressed: () {},
-                          child: Text(
-                            'AGENDA',
-                            style: TextStyle(color: Colors.white),
-                          ),
-                        ),
-                      ),
+                     
                       Container(
                         height: 40,
                         width: 110,
@@ -103,7 +89,7 @@ class _OverViewState extends State<OverView> {
               ],
             ),
           ),
-          Calendar()
+          //Grade()
         ],
        
     ));

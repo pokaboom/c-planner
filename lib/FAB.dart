@@ -31,7 +31,7 @@ class _FabActivityState extends State<FabActivity>
       shape: CircleBorder(),
       children: [
         SpeedDialChild(
-            child: Icon(Icons.import_contacts),
+            child: Icon(Icons.equalizer),
             backgroundColor: Colors.red,
             label: 'Grade',
             labelStyle: TextStyle(fontSize: 18.0),
@@ -41,7 +41,7 @@ class _FabActivityState extends State<FabActivity>
                   }
         ),
         SpeedDialChild(
-          child: Icon(Icons.assignment),
+          child: Icon(Icons.import_contacts),
           backgroundColor: Colors.blue,
           label: 'Subject',
           onTap:  () {
