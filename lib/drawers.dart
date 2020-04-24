@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './event/subject.dart';
 import 'dart:io';
+import './grades/grade.dart';
 import './timetable.dart';
 import './calendar.dart';
 import 'package:image_picker/image_picker.dart';
@@ -205,6 +206,10 @@ class _DrawersState extends State<Drawers> {
                     'Grades',
                     style: TextStyle(fontSize: 17),
                   ),
+                  onTap: () {
+                    Navigator.of(context).push(MaterialPageRoute(
+                        builder: (BuildContext context) => Grade()));
+                  },
                   leading: Icon(Icons.equalizer),
                 ),
               ),

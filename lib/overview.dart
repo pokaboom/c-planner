@@ -89,7 +89,49 @@ class _OverViewState extends State<OverView> {
               ],
             ),
           ),
-          //Grade()
+  Container(
+    width: 250,
+    height: 90,
+    
+    child: Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      color: Colors.pink,
+      elevation: 10,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          const ListTile(
+            leading: Icon(Icons.album, size: 70),
+            title: Text('Cognizance', style: TextStyle(color: Colors.white)),
+          ),
+          
+        ],
+      ),
+    ),
+  ),
+  Container(
+    width: 250,
+    height: 90,
+    child: Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15.0),
+      ),
+      color: Colors.pink,
+      elevation: 10,
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          const ListTile(
+            leading: Icon(Icons.album, size: 70),
+            title: Text('Spoural', style: TextStyle(color: Colors.white)),
+          ),
+          
+        ],
+      ),
+    ),
+  ),
         ],
        
     ));
